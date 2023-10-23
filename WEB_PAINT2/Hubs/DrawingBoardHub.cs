@@ -8,5 +8,10 @@ namespace WEB_PAINT2.Hubs
         {
             await Clients.Others.SendAsync("ReceiveDrawing", data);
         }
+
+        public async Task ClearBoard()
+        {
+            await Clients.Others.SendAsync("BoardCleared");
+        }
     }
 }
